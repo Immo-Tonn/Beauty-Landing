@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Основные -->
+    <title>BeautyTime — салон красоты в Кёльне</title>
+    <meta
+      name="description"
+      content="BeautyTime в Кёльне: маникюр, педикюр, стрижки, уход за кожей. Запишитесь онлайн прямо сейчас!"
+    />
+    <meta
+      name="keywords"
+      content="салон красоты, маникюр, педикюр, стрижки, уход за кожей, Кёльн, BeautyTime"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="BeautyTime — салон красоты в Кёльне" />
+    <meta
+      property="og:description"
+      content="BeautyTime предлагает маникюр, педикюр, стрижки и уход за кожей. Запишитесь онлайн прямо сейчас!"
+    />
+    <meta property="og:image" content="https://site.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://site.com/ru/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Альтернативные языки -->
+    <link rel="alternate" hreflang="ru" href="https://site.com/ru/" />
+    <link rel="alternate" hreflang="de" href="https://site.com/de/" />
+    <link rel="alternate" hreflang="en" href="https://site.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://site.com/ru/" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://site.com/ru/" />
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="../src/scss/main.scss" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">BeautyTime</div>
+
+          <ul class="menu">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#features">Услуги</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contact">Запись</a></li>
+          </ul>
+
+          <div class="language-switcher">
+            <a href="/de/">DE</a>
+            <span>|</span>
+            <a href="/ru/">RU</a>
+            <span>|</span>
+            <a href="/en/">EN</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container">
+          <h1>Красота начинается здесь</h1>
+          <p>Современный салон красоты с профессиональными мастерами</p>
+          <button id="cta-button" class="btn">Записаться</button>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2>Наши услуги</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <h3>Маникюр и педикюр</h3>
+              <p>Современные техники и высококачественные материалы</p>
+            </div>
+            <div class="feature-item">
+              <h3>Стрижки и укладки</h3>
+              <p>Профессиональные мастера для вашего идеального образа</p>
+            </div>
+            <div class="feature-item">
+              <h3>Уход за кожей</h3>
+              <p>Массаж и косметические процедуры</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>Записаться</h2>
+          <form id="contact-form">
+            <input type="text" id="name" placeholder="Ваше имя" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="tel" id="phone" placeholder="Телефон" required />
+            <textarea id="message" placeholder="Комментарий"></textarea>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              style="display: none"
+            />
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+          <div id="form-status"></div>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews">
+        <div class="container">
+          <h2>Отзывы</h2>
+          <div class="reviews-grid">
+            <div class="review-item">
+              <p>Лучший салон в городе!</p>
+              <span>— Анна</span>
+            </div>
+            <div class="review-item">
+              <p>Очень профессиональный сервис.</p>
+              <span>— Мария</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>BeautyTime | Телефон +49 123 456789 | Кёльн</p>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script type="module" src="../src/js/main.js"></script>
+  </body>
+</html>
