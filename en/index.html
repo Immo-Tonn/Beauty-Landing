@@ -4,39 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Основные -->
+    <!-- SEO -->
     <title>BeautyTime — Beauty Salon in Cologne</title>
     <meta
       name="description"
-      content="BeautyTime in Cologne: manicure, pedicure, haircuts, skincare. Book your appointment online now!"
+      content="BeautyTime in Cologne: Manicure, Pedicure, Haircut, Skincare. Book an appointment online!"
     />
     <meta
       name="keywords"
-      content="beauty salon, manicure, pedicure, haircuts, skincare, Cologne, BeautyTime"
+      content="beauty salon, manicure, pedicure, haircut, skincare, Cologne"
     />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph для соцсетей -->
+    <!-- Open Graph -->
     <meta property="og:title" content="BeautyTime — Beauty Salon in Cologne" />
     <meta
       property="og:description"
-      content="BeautyTime offers manicure, pedicure, haircuts, and skincare. Book your appointment online now!"
+      content="BeautyTime offers manicure, pedicure, haircut, and skincare. Book online now!"
     />
     <meta property="og:image" content="https://site.com/images/og-image.jpg" />
     <meta property="og:url" content="https://site.com/en/" />
     <meta property="og:type" content="website" />
 
-    <!-- Альтернативные языки -->
-    <link rel="alternate" hreflang="en" href="https://site.com/en/" />
+    <!-- Alternate languages -->
     <link rel="alternate" hreflang="de" href="https://site.com/de/" />
     <link rel="alternate" hreflang="ru" href="https://site.com/ru/" />
+    <link rel="alternate" hreflang="en" href="https://site.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://site.com/en/" />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://site.com/en/" />
 
-    <!-- Стили -->
+    <!-- Styles -->
     <link rel="stylesheet" href="../src/scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -44,7 +47,6 @@
       <div class="container">
         <nav class="nav">
           <div class="logo">BeautyTime</div>
-
           <button class="nav-toggle" aria-label="Toggle Menu">
             <span></span>
             <span></span>
@@ -55,14 +57,12 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#features">Services</a></li>
             <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Book Now</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
 
           <div class="language-switcher">
-            <a href="/de/">DE</a>
-            <span>|</span>
-            <a href="/ru/">RU</a>
-            <span>|</span>
+            <a href="/de/">DE</a> | <a href="/ru/">RU</a> |
             <a href="/en/">EN</a>
           </div>
         </nav>
@@ -73,8 +73,53 @@
       <section id="hero" class="hero">
         <div class="container">
           <h1>Beauty starts here</h1>
-          <p>Modern beauty salon with professional stylists</p>
-          <button id="cta-button" class="btn">Book an Appointment</button>
+          <p>
+            Modern beauty salon with professional stylists and a cozy atmosphere
+          </p>
+          <button id="cta-button" class="btn">Book Now</button>
+        </div>
+      </section>
+
+      <section class="salon-description">
+        <div class="container">
+          <p>
+            BeautyTime is a modern beauty salon in the heart of Cologne. We
+            combine professional beauty services with a relaxing atmosphere and
+            personalized care.
+          </p>
+          <p>
+            Our team works with high-quality products and the latest beauty
+            techniques to give you the best results and maximum comfort.
+          </p>
+        </div>
+      </section>
+
+      <section class="salon-principles">
+        <div class="container">
+          <div class="principles-content">
+            <p>
+              Quality, professionalism, and individual care are the core values
+              of our salon.
+            </p>
+            <ul>
+              <li>
+                ✔ High-quality <br />
+                products
+              </li>
+              <li>
+                ✔ Professional <br />
+                stylists
+              </li>
+              <li>
+                ✔ Personalized <br />
+                consultation
+              </li>
+              <li>
+                ✔ Relaxing <br />
+                atmosphere
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -84,15 +129,41 @@
           <div class="features-grid">
             <div class="feature-item">
               <h3>Manicure & Pedicure</h3>
-              <p>Modern techniques and high-quality materials</p>
+              <p>
+                Professional nail care with modern techniques, high-quality
+                materials, and stylish designs.
+              </p>
             </div>
             <div class="feature-item">
-              <h3>Haircuts & Styling</h3>
-              <p>Professional stylists for your perfect look</p>
+              <h3>Haircut & Styling</h3>
+              <p>
+                Individual haircuts and modern styling tailored to your personal
+                style.
+              </p>
             </div>
             <div class="feature-item">
               <h3>Skincare</h3>
-              <p>Massage and cosmetic treatments</p>
+              <p>
+                Professional facial treatments for cleansing, regeneration, and
+                skin care.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Make-up</h3>
+              <p>
+                Professional day, evening, and event make-up by experienced
+                makeup artists.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Eyebrows & Lashes</h3>
+              <p>
+                Shaping, coloring, and care for perfect eyebrows and lashes.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Massage</h3>
+              <p>Relaxing massages to restore and enhance your well-being.</p>
             </div>
           </div>
         </div>
@@ -100,12 +171,12 @@
 
       <section id="contact" class="contact-section">
         <div class="container">
-          <h2>Book an Appointment</h2>
+          <h2>Book Now</h2>
           <form id="contact-form">
             <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Email" required />
+            <input type="email" id="email" placeholder="E-mail" required />
             <input type="tel" id="phone" placeholder="Phone" required />
-            <textarea id="message" placeholder="Message"></textarea>
+            <textarea id="message" placeholder="Comment"></textarea>
             <input
               type="text"
               id="company"
@@ -118,17 +189,100 @@
         </div>
       </section>
 
+      <section id="contacts" class="contacts">
+        <div class="container">
+          <h2>Contacts</h2>
+          <div class="contacts-grid">
+            <div class="contacts-left">
+              <p><strong>Address:</strong> Cologne City Center</p>
+              <p><strong>Phone:</strong> +49 123 456789</p>
+              <p><strong>Email:</strong> info@beautytime.de</p>
+              <div class="social-links">
+                <a
+                  href="https://t.me/username"
+                  target="_blank"
+                  class="social-icon telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+                <a
+                  href="https://wa.me/49123456789"
+                  target="_blank"
+                  class="social-icon whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  class="social-icon facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="contacts-right">
+              <p style="margin-top: 10px">
+                <a href="https://maps.google.com/?q=Cologne" target="_blank"
+                  >Open in Google Maps</a
+                >
+              </p>
+              <iframe
+                src="https://www.google.com/maps?q=Cologne&output=embed"
+                width="100%"
+                height="350"
+                style="border: 0; border-radius: 12px"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="reviews" class="reviews">
         <div class="container">
-          <h2>Reviews</h2>
-          <div class="reviews-grid">
-            <div class="review-item">
-              <p>The best salon in town!</p>
-              <span>— Anna</span>
-            </div>
-            <div class="review-item">
-              <p>Very professional service.</p>
-              <span>— Maria</span>
+          <h2>Customer Reviews</h2>
+          <div class="reviews-carousel">
+            <div class="reviews-track">
+              <div class="review-item">
+                <p>Best salon in town!</p>
+                <span>— Anna</span>
+              </div>
+              <div class="review-item">
+                <p>Very professional service.</p>
+                <span>— Maria</span>
+              </div>
+              <div class="review-item">
+                <p>I'm thrilled with the results.</p>
+                <span>— Julia</span>
+              </div>
+              <div class="review-item">
+                <p>Very friendly team.</p>
+                <span>— Elena</span>
+              </div>
+              <div class="review-item">
+                <p>Top quality and great atmosphere.</p>
+                <span>— Sophie</span>
+              </div>
+              <!-- duplicates for infinite scroll -->
+              <div class="review-item">
+                <p>Best salon in town!</p>
+                <span>— Anna</span>
+              </div>
+              <div class="review-item">
+                <p>Very professional service.</p>
+                <span>— Maria</span>
+              </div>
+              <div class="review-item">
+                <p>I'm thrilled with the results.</p>
+                <span>— Julia</span>
+              </div>
+              <div class="review-item">
+                <p>Very friendly team.</p>
+                <span>— Elena</span>
+              </div>
+              <div class="review-item">
+                <p>Top quality and great atmosphere.</p>
+                <span>— Sophie</span>
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +291,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>BeautyTime | Phone +49 123 456789 | Cologne</p>
+        <p>BeautyTime Salon | Phone +49 123 456789 | Cologne</p>
         <p>© 2026</p>
       </div>
     </footer>

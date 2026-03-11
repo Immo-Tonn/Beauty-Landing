@@ -37,6 +37,11 @@
 
     <!-- Стили -->
     <link rel="stylesheet" href="../src/scss/main.scss" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -59,6 +64,7 @@
             <li><a href="#features">Leistungen</a></li>
             <li><a href="#reviews">Bewertungen</a></li>
             <li><a href="#contact">Termin</a></li>
+            <li><a href="#contacts">Kontakte</a></li>
           </ul>
 
           <!-- Переключатель языка (скрыт на мобильных) -->
@@ -85,6 +91,40 @@
         </div>
       </section>
 
+      <section class="salon-description">
+        <div class="container">
+          <p>
+            BeautyTime ist ein moderner Schönheitssalon im Herzen von Köln. Wir
+            verbinden professionelle Beauty-Dienstleistungen mit einer
+            entspannenden Atmosphäre und individueller Betreuung.
+          </p>
+
+          <p>
+            Unser Team arbeitet mit hochwertigen Produkten und neuesten
+            Techniken der Beauty-Industrie, um Ihnen das beste Ergebnis und
+            maximalen Komfort zu bieten.
+          </p>
+        </div>
+      </section>
+
+      <section class="salon-principles">
+        <div class="container">
+          <div class="principles-content">
+            <p>
+              Qualität, Professionalität und individuelle Betreuung sind die
+              wichtigsten Werte unseres Salons.
+            </p>
+
+            <ul>
+              <li>✔ Hochwertige <br> Produkte</li>
+              <li>✔ Professionelle <br> Stylisten</li>
+              <li>✔ Individuelle <br> Beratung</li>
+              <li>✔ Entspannte <br> Atmosphäre</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section id="features" class="features">
         <div class="container">
           <h2>Unsere Leistungen</h2>
@@ -92,17 +132,50 @@
           <div class="features-grid">
             <div class="feature-item">
               <h3>Maniküre & Pediküre</h3>
-              <p>Moderne Techniken und hochwertige Materialien</p>
+              <p>
+                Professionelle Nagelpflege mit modernen Techniken, hochwertigen
+                Materialien und stilvollen Designs.
+              </p>
             </div>
 
             <div class="feature-item">
               <h3>Haarschnitt & Styling</h3>
-              <p>Professionelle Stylisten für Ihren perfekten Look</p>
+              <p>
+                Individuelle Haarschnitte und modernes Styling, angepasst an
+                Ihren persönlichen Stil.
+              </p>
             </div>
 
             <div class="feature-item">
               <h3>Hautpflege</h3>
-              <p>Massage und Pflegebehandlungen</p>
+              <p>
+                Professionelle Gesichtsbehandlungen zur Reinigung, Regeneration
+                und Pflege Ihrer Haut.
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <h3>Make-up</h3>
+              <p>
+                Professionelles Tages-, Abend- und Event-Make-up von erfahrenen
+                Visagisten.
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <h3>Augenbrauen & Wimpern</h3>
+              <p>
+                Formgebung, Färben und Pflege für perfekte Augenbrauen und
+                Wimpern.
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <h3>Massage</h3>
+              <p>
+                Entspannende Massagen zur Regeneration und Verbesserung des
+                Wohlbefindens.
+              </p>
             </div>
           </div>
         </div>
@@ -129,20 +202,125 @@
         </div>
       </section>
 
-      <section id="reviews" class="reviews">
+      <section id="contacts" class="contacts">
         <div class="container">
-          <h2>Kundenbewertungen</h2>
-          <div class="reviews-grid">
-            <div class="review-item">
-              <p>Der beste Salon der Stadt!</p>
-              <span>— Anna</span>
+          <h2>Kontakte</h2>
+
+          <div class="contacts-grid">
+            <div class="contacts-left">
+              <p><strong>Adresse:</strong> Köln Innenstadt</p>
+
+              <p><strong>Telefon:</strong> +49 123 456789</p>
+
+              <p><strong>Email:</strong> info@beautytime.de</p>
+
+              <div class="social-links">
+                <a
+                  href="https://t.me/username"
+                  target="_blank"
+                  class="social-icon telegram"
+                >
+                  <i class="fab fa-telegram"></i>
+                </a>
+
+                <a
+                  href="https://wa.me/49123456789"
+                  target="_blank"
+                  class="social-icon whatsapp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  class="social-icon facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
             </div>
-            <div class="review-item">
-              <p>Sehr professioneller Service.</p>
-              <span>— Maria</span>
+
+            <div class="contacts-right">
+              <p style="margin-top: 10px">
+                <a href="https://maps.google.com/?q=Köln" target="_blank">
+                  In Google Maps öffnen
+                </a>
+              </p>
+              <iframe
+                src="https://www.google.com/maps?q=Köln&output=embed"
+                width="100%"
+                height="350"
+                style="border: 0; border-radius: 12px"
+                loading="lazy"
+              >
+              </iframe>
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="reviews" class="reviews">
+        <div class="container">
+          <h2>Kundenbewertungen</h2>
+
+       <div class="reviews-carousel">
+  <div class="reviews-track">
+
+    <div class="review-item">
+      <p>Der beste Salon der Stadt!</p>
+      <span>— Anna</span>
+    </div>
+
+    <div class="review-item">
+      <p>Sehr professioneller Service.</p>
+      <span>— Maria</span>
+    </div>
+
+    <div class="review-item">
+      <p>Ich bin begeistert vom Ergebnis.</p>
+      <span>— Julia</span>
+    </div>
+
+    <div class="review-item">
+      <p>Sehr freundliches Team.</p>
+      <span>— Elena</span>
+    </div>
+
+    <div class="review-item">
+      <p>Top Qualität und tolle Atmosphäre.</p>
+      <span>— Sophie</span>
+    </div>
+
+    <!-- дубли для бесконечной прокрутки -->
+    <div class="review-item">
+      <p>Der beste Salon der Stadt!</p>
+      <span>— Anna</span>
+    </div>
+
+    <div class="review-item">
+      <p>Sehr professioneller Service.</p>
+      <span>— Maria</span>
+    </div>
+
+    <div class="review-item">
+      <p>Ich bin begeistert vom Ergebnis.</p>
+      <span>— Julia</span>
+    </div>
+
+    <div class="review-item">
+      <p>Sehr freundliches Team.</p>
+      <span>— Elena</span>
+    </div>
+
+    <div class="review-item">
+      <p>Top Qualität und tolle Atmosphäre.</p>
+      <span>— Sophie</span>
+    </div>
+
+  </div>
+</div>
+
       </section>
     </main>
 

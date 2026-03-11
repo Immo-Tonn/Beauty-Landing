@@ -24,7 +24,7 @@ if (contactForm) {
   const requiredInputs = contactForm.querySelectorAll("input[required]");
   requiredInputs.forEach((input) => {
     input.addEventListener("invalid", (e) => {
-      e.preventDefault(); // отключаем стандартное всплывающее сообщение
+      e.preventDefault();
       statusMessage.textContent =
         lang === "de"
           ? "Bitte geben Sie Name, E-Mail und Telefon ein."
@@ -33,7 +33,6 @@ if (contactForm) {
             : "Please enter name, email, and phone.";
     });
 
-    // Сброс сообщения при вводе
     input.addEventListener("input", () => {
       statusMessage.textContent = "";
     });
@@ -47,9 +46,8 @@ if (contactForm) {
     const email = document.querySelector("#email").value.trim();
     const phone = document.querySelector("#phone").value.trim();
     const message = document.querySelector("#message").value.trim();
-    const company = document.querySelector("#company").value.trim(); // honeypot
+    const company = document.querySelector("#company").value.trim();
 
-    // Проверка honeypot спама
     if (company) {
       statusMessage.textContent =
         lang === "de"
@@ -60,7 +58,6 @@ if (contactForm) {
       return;
     }
 
-    // Показываем статус отправки
     statusMessage.textContent =
       lang === "de" ? "Sende..." : lang === "ru" ? "Отправка..." : "Sending...";
 
@@ -98,6 +95,7 @@ if (contactForm) {
       console.error(err);
     }
   });
+
   // ===== Мобильное выпадающее меню =====
   const navToggle = document.querySelector(".nav-toggle");
   const menu = document.querySelector(".menu");
@@ -107,7 +105,6 @@ if (contactForm) {
       menu.classList.toggle("active");
     });
 
-    // Закрытие меню при клике на ссылку
     menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         menu.classList.remove("active");
@@ -115,3 +112,26 @@ if (contactForm) {
     });
   }
 }
+
+/* =====================================================
+   КАРУСЕЛЬ ОТЗЫВОВ
+===================================================== */
+
+const reviewsTrack = document.querySelector(".reviews-track");
+const reviewCards = document.querySelectorAll(".review-item");
+
+let carouselPaused = false;
+
+reviewCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    if (!carouselPaused) {
+      reviewsTrack.style.animationPlayState = "paused";
+      card.classList.add("active");
+      carouselPaused = true;
+    } else {
+      reviewsTrack.style.animationPlayState = "running";
+      reviewCards.forEach((c) => c.classList.remove("active"));
+      carouselPaused = false;
+    }
+  });
+});

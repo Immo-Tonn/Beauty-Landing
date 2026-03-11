@@ -4,39 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Основные -->
-    <title>BeautyTime — салон красоты в Кёльне</title>
+    <!-- SEO -->
+    <title>BeautyTime — Салон красоты в Кёльне</title>
     <meta
       name="description"
-      content="BeautyTime в Кёльне: маникюр, педикюр, стрижки, уход за кожей. Запишитесь онлайн прямо сейчас!"
+      content="BeautyTime в Кёльне: маникюр, педикюр, стрижка, уход за кожей. Забронируйте онлайн!"
     />
     <meta
       name="keywords"
-      content="салон красоты, маникюр, педикюр, стрижки, уход за кожей, Кёльн, BeautyTime"
+      content="салон красоты, маникюр, педикюр, стрижка, уход за кожей, Кёльн"
     />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph для соцсетей -->
-    <meta property="og:title" content="BeautyTime — салон красоты в Кёльне" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="BeautyTime — Салон красоты в Кёльне" />
     <meta
       property="og:description"
-      content="BeautyTime предлагает маникюр, педикюр, стрижки и уход за кожей. Запишитесь онлайн прямо сейчас!"
+      content="BeautyTime предлагает маникюр, педикюр, стрижку и уход за кожей. Забронируйте онлайн!"
     />
     <meta property="og:image" content="https://site.com/images/og-image.jpg" />
     <meta property="og:url" content="https://site.com/ru/" />
     <meta property="og:type" content="website" />
 
     <!-- Альтернативные языки -->
-    <link rel="alternate" hreflang="ru" href="https://site.com/ru/" />
     <link rel="alternate" hreflang="de" href="https://site.com/de/" />
+    <link rel="alternate" hreflang="ru" href="https://site.com/ru/" />
     <link rel="alternate" hreflang="en" href="https://site.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://site.com/ru/" />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://site.com/ru/" />
 
     <!-- Стили -->
     <link rel="stylesheet" href="../src/scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -44,8 +47,7 @@
       <div class="container">
         <nav class="nav">
           <div class="logo">BeautyTime</div>
-
-          <button class="nav-toggle" aria-label="Открыть меню">
+          <button class="nav-toggle" aria-label="Toggle Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -55,14 +57,12 @@
             <li><a href="#hero">Главная</a></li>
             <li><a href="#features">Услуги</a></li>
             <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#contact">Запись</a></li>
+            <li><a href="#contact">Записаться</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
 
           <div class="language-switcher">
-            <a href="/de/">DE</a>
-            <span>|</span>
-            <a href="/ru/">RU</a>
-            <span>|</span>
+            <a href="/de/">DE</a> | <a href="/ru/">RU</a> |
             <a href="/en/">EN</a>
           </div>
         </nav>
@@ -73,8 +73,55 @@
       <section id="hero" class="hero">
         <div class="container">
           <h1>Красота начинается здесь</h1>
-          <p>Современный салон красоты с профессиональными мастерами</p>
+          <p>
+            Современный салон красоты с профессиональными стилистами и уютной
+            атмосферой
+          </p>
           <button id="cta-button" class="btn">Записаться</button>
+        </div>
+      </section>
+
+      <section class="salon-description">
+        <div class="container">
+          <p>
+            BeautyTime — современный салон красоты в центре Кёльна. Мы соединяем
+            профессиональные услуги с расслабляющей атмосферой и индивидуальным
+            подходом.
+          </p>
+          <p>
+            Наша команда использует качественные продукты и новейшие техники
+            индустрии красоты, чтобы обеспечить лучший результат и максимальный
+            комфорт.
+          </p>
+        </div>
+      </section>
+
+      <section class="salon-principles">
+        <div class="container">
+          <div class="principles-content">
+            <p>
+              Качество, профессионализм и индивидуальный подход — основные
+              ценности нашего салона.
+            </p>
+            <ul>
+              <li>
+                ✔ Качественные <br />
+                продукты
+              </li>
+              <li>
+                ✔ Профессиональные <br />
+                стилисты
+              </li>
+              <li>
+                ✔ Индивидуальная <br />
+                консультация
+              </li>
+              <li>
+                ✔ Расслабляющая <br />
+                атмосфера
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -84,15 +131,44 @@
           <div class="features-grid">
             <div class="feature-item">
               <h3>Маникюр и педикюр</h3>
-              <p>Современные техники и высококачественные материалы</p>
+              <p>
+                Профессиональный уход за ногтями с современными техниками,
+                качественными материалами и стильными дизайнами.
+              </p>
             </div>
             <div class="feature-item">
-              <h3>Стрижки и укладки</h3>
-              <p>Профессиональные мастера для вашего идеального образа</p>
+              <h3>Стрижка и укладка</h3>
+              <p>
+                Индивидуальные стрижки и современная укладка, адаптированная к
+                вашему стилю.
+              </p>
             </div>
             <div class="feature-item">
               <h3>Уход за кожей</h3>
-              <p>Массаж и косметические процедуры</p>
+              <p>
+                Профессиональные процедуры для очищения, регенерации и ухода за
+                вашей кожей.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Макияж</h3>
+              <p>
+                Профессиональный дневной, вечерний и праздничный макияж от
+                опытных визажистов.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Брови и ресницы</h3>
+              <p>
+                Формирование, окрашивание и уход для идеальных бровей и ресниц.
+              </p>
+            </div>
+            <div class="feature-item">
+              <h3>Массаж</h3>
+              <p>
+                Расслабляющие массажи для восстановления и улучшения
+                самочувствия.
+              </p>
             </div>
           </div>
         </div>
@@ -103,7 +179,7 @@
           <h2>Записаться</h2>
           <form id="contact-form">
             <input type="text" id="name" placeholder="Ваше имя" required />
-            <input type="email" id="email" placeholder="Email" required />
+            <input type="email" id="email" placeholder="E-mail" required />
             <input type="tel" id="phone" placeholder="Телефон" required />
             <textarea id="message" placeholder="Комментарий"></textarea>
             <input
@@ -118,17 +194,100 @@
         </div>
       </section>
 
+      <section id="contacts" class="contacts">
+        <div class="container">
+          <h2>Контакты</h2>
+          <div class="contacts-grid">
+            <div class="contacts-left">
+              <p><strong>Адрес:</strong> Центр Кёльна</p>
+              <p><strong>Телефон:</strong> +49 123 456789</p>
+              <p><strong>Email:</strong> info@beautytime.de</p>
+              <div class="social-links">
+                <a
+                  href="https://t.me/username"
+                  target="_blank"
+                  class="social-icon telegram"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+                <a
+                  href="https://wa.me/49123456789"
+                  target="_blank"
+                  class="social-icon whatsapp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  class="social-icon facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="contacts-right">
+              <p style="margin-top: 10px">
+                <a href="https://maps.google.com/?q=Кёльн" target="_blank"
+                  >Открыть в Google Maps</a
+                >
+              </p>
+              <iframe
+                src="https://www.google.com/maps?q=Кёльн&output=embed"
+                width="100%"
+                height="350"
+                style="border: 0; border-radius: 12px"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="reviews" class="reviews">
         <div class="container">
-          <h2>Отзывы</h2>
-          <div class="reviews-grid">
-            <div class="review-item">
-              <p>Лучший салон в городе!</p>
-              <span>— Анна</span>
-            </div>
-            <div class="review-item">
-              <p>Очень профессиональный сервис.</p>
-              <span>— Мария</span>
+          <h2>Отзывы клиентов</h2>
+          <div class="reviews-carousel">
+            <div class="reviews-track">
+              <div class="review-item">
+                <p>Лучший салон в городе!</p>
+                <span>— Анна</span>
+              </div>
+              <div class="review-item">
+                <p>Очень профессиональный сервис.</p>
+                <span>— Мария</span>
+              </div>
+              <div class="review-item">
+                <p>Я в восторге от результата.</p>
+                <span>— Юлия</span>
+              </div>
+              <div class="review-item">
+                <p>Очень дружелюбная команда.</p>
+                <span>— Елена</span>
+              </div>
+              <div class="review-item">
+                <p>Высокое качество и отличная атмосфера.</p>
+                <span>— София</span>
+              </div>
+              <!-- дубли для бесконечной прокрутки -->
+              <div class="review-item">
+                <p>Лучший салон в городе!</p>
+                <span>— Анна</span>
+              </div>
+              <div class="review-item">
+                <p>Очень профессиональный сервис.</p>
+                <span>— Мария</span>
+              </div>
+              <div class="review-item">
+                <p>Я в восторге от результата.</p>
+                <span>— Юлия</span>
+              </div>
+              <div class="review-item">
+                <p>Очень дружелюбная команда.</p>
+                <span>— Елена</span>
+              </div>
+              <div class="review-item">
+                <p>Высокое качество и отличная атмосфера.</p>
+                <span>— София</span>
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +296,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>BeautyTime | Телефон +49 123 456789 | Кёльн</p>
+        <p>Салон BeautyTime | Телефон +49 123 456789 | Кёльн</p>
         <p>© 2026</p>
       </div>
     </footer>
