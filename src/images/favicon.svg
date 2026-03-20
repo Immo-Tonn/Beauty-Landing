@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f39ca0">
+        <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="50%" stop-color="#aaddff">
+        <animate attributeName="offset" values="0.5;1.5;0.5" dur="6s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="100%" stop-color="#fff09a">
+        <animate attributeName="offset" values="1;2;1" dur="6s" repeatCount="indefinite"></animate>
+      </stop>
+    </linearGradient>
+
+    <!-- стеклянный эффект -->
+    <radialGradient id="glass" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.4)"></stop>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+    </radialGradient>
+  </defs>
+
+  <!-- фон -->
+  <rect width="64" height="64" rx="16" fill="#222"></rect>
+
+  <!-- glass overlay -->
+  <rect width="64" height="64" rx="16" fill="url(#glass)"></rect>
+
+  <!-- текст -->
+  <text x="50%" y="56%" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="url(#grad)" letter-spacing="1">
+    BeTi
+  </text>
+</svg>
