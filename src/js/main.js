@@ -107,14 +107,36 @@ const navToggle = document.querySelector(".nav-toggle");
 const menu = document.querySelector(".menu");
 
 if (navToggle && menu) {
-  navToggle.addEventListener("click", () => {
+  // 🔁 Открыть / закрыть по бургеру
+  navToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // чтобы не сработал document click
     menu.classList.toggle("active");
   });
 
+  // 🔗 Закрытие при клике на пункт
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      menu.classList.remove("active");
+      setTimeout(() => {
+        menu.classList.remove("active");
+      }, 500); // задержка в миллисекундах (300ms = 0.3 секунды)
     });
+  });
+
+  // ❌ Закрытие при клике вне меню
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = menu.contains(e.target);
+    const isClickOnToggle = navToggle.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnToggle) {
+      menu.classList.remove("active");
+    }
+  });
+
+  // ❌ Закрытие пл ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      menu.classList.remove("active");
+    }
   });
 }
 
