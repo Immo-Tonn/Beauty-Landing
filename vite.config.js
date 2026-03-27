@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from "vite";
 import path from "path";
 
@@ -6,7 +5,9 @@ export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
+
   build: {
+    outDir: "dist",
     rollupOptions: {
       input: {
         ru: path.resolve(__dirname, "src/ru/index.html"),
@@ -15,10 +16,14 @@ export default defineConfig({
       },
     },
   },
+
   server: {
     port: 5173,
     proxy: {
-      "/api": { target: "http://localhost:3000", changeOrigin: true },
+      "/api": {
+        target: "http://localhost:3000", // только для dev
+        changeOrigin: true,
+      },
     },
   },
 });
