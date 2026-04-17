@@ -2,12 +2,17 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
+  base: "/",
+
   resolve: {
-    alias: { "@": path.resolve(__dirname, "./src") },
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
 
   build: {
     outDir: "dist",
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         ru: path.resolve(__dirname, "src/ru/index.html"),

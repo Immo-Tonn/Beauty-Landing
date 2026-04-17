@@ -1,38 +1,22 @@
 import nodemailer from "nodemailer";
-import rateLimit from "express-rate-limit";
-
-// ⚠️ простой rate limit (будет работать ограниченно в serverless)
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 10,
-});
-
-// обёртка, чтобы использовать limiter без express app
-function runMiddleware(req, res, fn) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result) => {
-      if (result instanceof Error) return reject(result);
-      return resolve(result);
-    });
-  });
-}
 
 export default async function handler(req, res) {
-  // Только POST
+  // Разрешаем только POST
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  // rate limit (как у тебя было)
-  await runMiddleware(req, res, limiter);
+  // Безопасный парсинг body (важно для Vercel)
+  const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
-  const { name, email, phone, message, company, lang } = req.body;
+  const { name, email, phone, message, company, lang } = body;
 
-  // Honeypot
+  // Honeypot (анти-бот)
   if (company) {
     return res.status(400).json({ error: "Spam detected" });
   }
 
+  // Сообщения по языкам
   const messages = {
     de: "Bitte geben Sie Name, E-Mail und Telefon ein",
     ru: "Введите имя, email и телефон",
@@ -41,11 +25,13 @@ export default async function handler(req, res) {
 
   const language = messages[lang] ? lang : "de";
 
+  // Валидация
   if (!name || !email || !phone) {
     return res.status(400).json({ error: messages[language] });
   }
 
   try {
+    // Создание транспорта
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -54,16 +40,22 @@ export default async function handler(req, res) {
       },
     });
 
-    await transporter.sendMail({
-      from: `"BeautyTime Kontaktformular" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
-      replyTo: email,
-      subject: `Neue BeautyTime Anfrage von ${name}`,
-      text: `Name: ${name}
+    // Отправка письма с таймаутом
+    await Promise.race([
+      transporter.sendMail({
+        from: `"BeautyTime Kontaktformular" <${process.env.EMAIL_USER}>`,
+        to: process.env.EMAIL_USER,
+        replyTo: email,
+        subject: `Neue BeautyTime Anfrage von ${name}`,
+        text: `Name: ${name}
 E-Mail: ${email}
 Telefon: ${phone}
-Nachricht: ${message}`,
-    });
+Nachricht: ${message || "-"}`,
+      }),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Timeout")), 10000),
+      ),
+    ]);
 
     return res.status(200).json({ success: true });
   } catch (error) {
