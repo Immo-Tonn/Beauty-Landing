@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeautyTime</title>
+
+    <script>
+      (function () {
+        const path = window.location.pathname;
+
+        // защита от зацикливания
+        if (
+          path.startsWith("/de") ||
+          path.startsWith("/ru") ||
+          path.startsWith("/en")
+        ) {
+          return;
+        }
+
+        const savedLang = localStorage.getItem("lang");
+        const browserLang = (navigator.language || "de").toLowerCase();
+
+        let lang = "de";
+
+        if (savedLang) {
+          lang = savedLang;
+        } else if (browserLang.startsWith("ru")) {
+          lang = "ru";
+        } else if (browserLang.startsWith("en")) {
+          lang = "en";
+        }
+
+        window.location.replace("/" + lang + "/index.html");
+      })();
+    </script>
+
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/de/index.html" />
+    </noscript>
+
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
